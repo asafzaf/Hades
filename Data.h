@@ -11,10 +11,11 @@ class Data {
 private:
 	Map* m_mapsData;
 	Room* m_roomData;
-
+	
 public:
 	//---      Methods      ---//
-
+	Data(Room* RoomData);
+	~Data();
 
 	//--- Getters & setters ---//
 	Map* getMapData() { return m_mapsData; }

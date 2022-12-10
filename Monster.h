@@ -13,7 +13,8 @@ private:
 public:
 
 	//---      Methods      ---//
-
+	Monster* operator+=(Monster* monster);
+	Monster* operator++();
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

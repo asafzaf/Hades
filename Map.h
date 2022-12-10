@@ -14,7 +14,9 @@ private:
 
 public:
 	//---      Methods      ---//
-
+	Map* operator+=(Map* map);
+	Map* operator+(Map* map);
+	Map* operator=(Map* map);
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

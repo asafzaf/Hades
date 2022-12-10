@@ -12,10 +12,12 @@ private:
 	Data m_data;
 
 public:
-
+	Game(Room* RoomData);
+	~Game();
 
 	//---      Methods      ---//
-
+	void addData(); // ?
+	void getMapName();
 
 	//--- Getters & setters ---//
 	Map* getCurrentMap() { return m_currentMap; }

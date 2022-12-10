@@ -19,7 +19,11 @@ private:
 
 public:
 	//---      Methods      ---//
-
+	Item& operator+= (Item* item);
+	Item  operator+  (Item* item);
+	Item& operator=  (Item* item);
+	Item& operator++ ();
+	Item  operator++ (int);
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }
@@ -28,4 +32,3 @@ public:
 	 rarity getRarity() { return m_rarity; }
 	 void setRarity(rarity rar) { m_rarity = rar; }
 };
-
