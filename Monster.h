@@ -11,6 +11,8 @@ private:
 	int m_level;
 
 public:
+	Monster(char* name);
+	~Monster();
 
 	//---      Methods      ---//
 	Monster* operator+=(Monster* monster);

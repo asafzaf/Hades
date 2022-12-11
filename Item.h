@@ -18,9 +18,11 @@ private:
 	enum rarity m_rarity;
 
 public:
+	Item(char* name, rarity rarity);
+
 	//---      Methods      ---//
 	Item& operator+= (Item* item);
-	Item  operator+  (Item* item);
+	Item  operator+  (Item& item);
 	Item& operator=  (Item* item);
 	Item& operator++ ();
 	Item  operator++ (int);
