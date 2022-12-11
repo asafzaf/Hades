@@ -1,4 +1,4 @@
-// This project made by:
+﻿// This project made by:
 // Asaf Zafrir (205929029)
 
 #pragma once
@@ -14,9 +14,9 @@ private:
 
 public:
 	//---      Methods      ---//
-	Map* operator+=(Map* map);
-	Map* operator+(Map* map);
-	Map* operator=(Map* map);
+	Map* operator+=(Map* map); // חיבור ( שרשור ) למפה נוספת
+	Map* operator+(Map* map); // חיבור בין מפות
+	Map* operator=(Map* map); // דריסת מפה על ידי מפה אחרת
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

@@ -19,10 +19,11 @@ private:
 
 public:
 	Item(char* name, rarity rarity);
+	~Item();
 
 	//---      Methods      ---//
 	Item& operator+= (Item* item);
-	Item  operator+  (Item& item);
+	Item  operator+  (const Item& item) const;
 	Item& operator=  (Item* item);
 	Item& operator++ ();
 	Item  operator++ (int);

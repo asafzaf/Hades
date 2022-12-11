@@ -13,6 +13,6 @@ Item::~Item() { // Distractor
 }
 
 
-Item Item::operator+ (Item& item) {
-
+Item Item::operator+ (const Item& item) const {
+	return Item()
 }
