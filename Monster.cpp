@@ -11,3 +11,12 @@ Monster::Monster(char* name) {
 Monster::~Monster() {
 	delete m_name;
 }
+
+Monster* Monster::operator+=(Monster& monster) {
+
+}
+
+Monster& Monster::operator++() { // ++Monster (level up).
+	this->setLevel(this->getLevel() + 1);
+	return *this;
+}

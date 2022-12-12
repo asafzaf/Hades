@@ -17,8 +17,8 @@ public:
 	Data(Room* RoomData);
 	~Data();
 
-	void addMap(Map* mapData); // להוסיף מפה חדשה
-	bool mapNameCheck(Map* mapData); // לבדוק האם קיימת המפה בשם
+	void addMap(Map* mapData); // Add new Map.
+	bool mapNameCheck(Map* mapData); // Checking if there is a Map with same Name.
 
 	//--- Getters & setters ---//
 	Map* getMapData() { return m_mapsData; }

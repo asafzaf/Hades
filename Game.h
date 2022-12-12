@@ -18,9 +18,10 @@ public:
 	//---      Methods      ---//
 	void addData(); // ?
 	void getMapName();
-	bool checkRoomExistence(Room* room); // בדיקה האם החדר כבר קיים במפה
-	bool FreeSpaceForRoom(); // בודק האם יש מקום פנוי לחדר מבחינת כיווני אוויר
-	bool FreeSpace(); // בודק האם בכלל יש מקום פנוי מסביב
+	bool checkRoomExistence(Room* room); // Checking if there is a Room with the same Name.
+	bool FreeSpaceForRoom(); // Check if there is a space in a speciffic wind direction.
+	bool FreeSpace(); // Checking if there any free space in all wind directions.
+
 	//--- Getters & setters ---//
 	Map* getCurrentMap() { return m_currentMap; }
 	void setCurrentMap(Map* map) { m_currentMap = map; }

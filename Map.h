@@ -14,9 +14,9 @@ private:
 
 public:
 	//---      Methods      ---//
-	Map* operator+=(Map* map); // חיבור ( שרשור ) למפה נוספת
-	Map* operator+(Map* map); // חיבור בין מפות
-	Map* operator=(Map* map); // דריסת מפה על ידי מפה אחרת
+	Map* operator+=(Map* map); // Connect and add to Map.
+	Map* operator+(Map* map); // Connect between Maps.
+	Map* operator=(Map* map); // Assign new map on the previous.
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

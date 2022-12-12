@@ -7,6 +7,13 @@
 
 //---        Room.h          ---//
 
+enum WindDir {
+	North,
+	West,
+	South,
+	East
+};
+
 class Room {
 private:
 	char* m_name;
@@ -18,9 +25,10 @@ private:
 	Room* West;
 
 public:
+	Room(char* name, WindDir dir, Room* nextRoom);
 
 	//---      Methods      ---//
-
+	Monster* operator+=(Monster& monster);
 
 
 	//--- Getters & setters ---//
@@ -32,6 +40,12 @@ public:
 
 	Monster* getMonster() { return m_monsters; }
 	void setMonster(Monster* monster) { m_monsters = monster; }
+
+	void setNorth(Room* room) { North = room; }
+	void setWest(Room* room) { West = room; }
+	void setSouth(Room* room) { South = room; }
+	void setEast(Room* room) { East = room; }
+
 };
 
 
