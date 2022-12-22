@@ -14,11 +14,12 @@ enum rarity {
 
 class Item {
 private:
-	char* m_name;
+	const char* m_name;
 	enum rarity m_rarity;
 
 public:
-	Item(char* name, rarity rarity);
+	Item();
+	Item(const char* name, rarity rarity);
 	~Item();
 
 	//---      Methods      ---//
@@ -26,11 +27,11 @@ public:
 	Item  operator+  (const Item& item) const;
 	Item& operator=  (Item* item);
 	Item& operator++ ();
-	Item  operator++ (int);
+	Item& operator++ (int);
 
 	//--- Getters & setters ---//
-	char* getName() { return m_name; }
-	void setName(char* name) { m_name = name; }
+	const char* getName() { return m_name; }
+	void setName(const char* name) { m_name = name; }
 
 	 rarity getRarity() { return m_rarity; }
 	 void setRarity(rarity rar) { m_rarity = rar; }

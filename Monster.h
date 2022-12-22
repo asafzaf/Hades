@@ -15,8 +15,9 @@ public:
 	~Monster();
 
 	//---      Methods      ---//
-	Monster* operator+=(Monster& monster); // Connect between Monsters?
+	Monster& operator+=(Monster& monster); // Connect between Monsters?
 	Monster& operator++(); // ++Monster (level up).
+	Monster& operator=(const Monster& monster);
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

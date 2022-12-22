@@ -16,24 +16,25 @@ enum WindDir {
 
 class Room {
 private:
-	char* m_name;
+	const char* m_name;
 	Item* m_item;
 	Monster* m_monsters;
 	Room* North;
 	Room* South;
 	Room* East;
 	Room* West;
-
+	Room* next;
 public:
-	Room(char* name, WindDir dir, Room* nextRoom);
+	Room(const char* name, WindDir dir, Room* nextRoom);
+	Room();
 
 	//---      Methods      ---//
-	Monster* operator+=(Monster& monster);
+	Room* operator+=(Room* room);
 
 
 	//--- Getters & setters ---//
-	char* getName() { return m_name; }
-	void setName(char* name) { m_name = name; }
+	const char* getName() { return m_name; }
+	void setName(const char* name) { m_name = name; }
 
 	Item* getItem() { return m_item; }
 	void setItem(Item* item) { m_item = item; }

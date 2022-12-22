@@ -5,16 +5,17 @@
 #include "Map.h"
 #include "Room.h"
 
-//---        Dish.h          ---//
+//---        Data.h          ---//
 
 class Data {
 private:
 	Map* m_mapsData;
 	Room* m_roomData;
+	Item* m_ItemData;
 	
 public:
 	//---      Methods      ---//
-	Data(Room* RoomData);
+	Data();
 	~Data();
 
 	void addMap(Map* mapData); // Add new Map.
@@ -26,4 +27,7 @@ public:
 
 	Room* getRoomData() { return m_roomData; }
 	void setRoomData(Room* roomdata) { m_roomData; }
+
+	Item* getItemData() { return m_ItemData; }
+	void setItemData(Item* itemdata) { m_ItemData = itemdata; }
 };

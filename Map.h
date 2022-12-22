@@ -13,10 +13,14 @@ private:
 	int m_numberOfRooms;
 
 public:
+	Map();
+	~Map();
+
 	//---      Methods      ---//
-	Map* operator+=(Map* map); // Connect and add to Map.
-	Map* operator+(Map* map); // Connect between Maps.
-	Map* operator=(Map* map); // Assign new map on the previous.
+	Map& operator+=(Map* map); // Connect and add to Map.
+	Map operator+(Map& map); // Connect between Maps.
+	Map& operator=(Map* map); // Assign new map on the previous.
+	bool checkRoomOnlist(const Room& room);
 
 	//--- Getters & setters ---//
 	char* getName() { return m_name; }

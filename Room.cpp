@@ -1,10 +1,16 @@
+// This project made by:
+// Asaf Zafrir (205929029)
+
 #include <iostream>
 #include "Room.h"
 
-Room::Room(char* name, WindDir dir, Room* nextRoom) {
-	int namelen = strlen(name);
+Room::Room(const char* name, WindDir dir, Room* nextRoom) {
+	
+	m_name = name;
+	
+	/*int namelen = strlen(name);
 	m_name = new char[namelen + 1];
-	strcpy(m_name, name);
+	strcpy(m_name, name);*/
 
 	switch (dir)
 	{
@@ -39,4 +45,21 @@ Room::Room(char* name, WindDir dir, Room* nextRoom) {
 	default:
 		std::cout << "Error!" << std::endl;
 	}
+}
+
+Room::Room() {
+	m_name = nullptr;
+	m_item = new Item[10];
+	m_monsters = nullptr;
+	North = nullptr;
+	South = nullptr;
+	East = nullptr;
+	West = nullptr;
+}
+
+Room* Room::operator+=(Room* room) {
+	Room* temp = new Room();
+
+	next = room;
+
 }

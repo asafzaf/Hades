@@ -12,10 +12,14 @@ private:
 	Data m_data;
 
 public:
-	Game(Room* RoomData);
+	Game();
 	~Game();
 
 	//---      Methods      ---//
+	void addRoom();
+	void printMapsData();
+	void printItemsData();
+	
 	void addData(); // ?
 	void getMapName();
 	bool checkRoomExistence(Room* room); // Checking if there is a Room with the same Name.
